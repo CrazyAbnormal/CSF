@@ -258,132 +258,41 @@
                     </tr>
                     <tr>
                         <td colspan="3" class="text-right">Total No. of Very Satisfied (VS) Responses:</td>
-                        <td class="text-center">
-                            <span v-if="data.apr_vs_grand_total > 0">
-                                {{ data.apr_vs_grand_total }}
-                            </span>
-                        </td>
-                        <td class="text-center"> 
-                            <span v-if="data.may_vs_grand_total  > 0">
-                                {{ data.may_vs_grand_total  }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.jun_vs_grand_total   > 0">
-                                {{ data.jun_vs_grand_total   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.vs_grand_total_raw_points  > 0">
-                                {{ data.vs_grand_total_raw_points   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.vs_grand_total_score  > 0">
-                                {{ data.vs_grand_total_score   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.vs_grand_total_score  > 0 && data.grand_total_score">
-                                {{ calculate(data.vs_grand_total_score, data.grand_total_score) }}
-                            </span>  
-                        </td>
+                        <td class="text-center">{{ data.apr_total_vs_respondents }}</td>
+                        <td class="text-center"> {{ data.may_total_vs_respondents }} </td>
+                        <td class="text-center">{{ data.jun_total_vs_respondents }} </td>
+                        <td class="text-center">{{ data.vs_grand_total_raw_points }} </td>
+                        <td class="text-center">{{ data.vs_grand_total_score }}</td>
+                        <td class="text-center">{{ calculate(data.vs_grand_total_score, data.grand_total_score) }}</td>
 
                     </tr>
                     <tr>
                         <td colspan="3" class="text-right">Total No. of Satisfied (S) Responses:</td>
-                        <td class="text-center">
-                            <span v-if="data.apr_s_grand_total  > 0">
-                                {{ data.apr_s_grand_total   }}
-                            </span>
-                        </td>
-                        <td class="text-center"> 
-                            <span v-if="data.may_s_grand_total  > 0">
-                                {{ data.may_s_grand_total   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.jun_s_grand_total  > 0">
-                                {{ data.jun_s_grand_total   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.s_grand_total_raw_points  > 0">
-                                {{ data.s_grand_total_raw_points   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.s_grand_total_score  > 0">
-                                {{ data.s_grand_total_score   }}
-                            </span>
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.s_grand_total_score  > 0 && data.grand_total_score  > 0">
-                                {{ calculate(data.s_grand_total_score, data.grand_total_score) }}
-                            </span>
-                        </td>
+                        <td class="text-center">{{ data.apr_total_s_respondents }}</td>
+                        <td class="text-center"> {{ data.may_total_s_respondents }} </td>
+                        <td class="text-center">{{ data.jun_total_s_respondents }} </td>
+                        <td class="text-center">{{ data.s_grand_total_raw_points }}</td>
+                        <td class="text-center">{{ data.s_grand_total_score }}</td>
+                        <td class="text-center">{{ calculate(data.s_grand_total_score, data.grand_total_score) }}</td>
 
+ 
                     </tr>
                     <tr>
                         <td colspan="3" class="text-right">Total No. of Other (N, D, VD) Responses:</td>
-                        <td class="text-center">
-                            <span v-if="data.apr_total_ndvd_respondents  > 0">
-                                {{ data.apr_total_ndvd_respondents }}
-                            </span> 
-                        </td>
-                        <td class="text-center"> 
-                            <span v-if="data.may_total_ndvd_respondents  > 0">
-                                {{ data.may_total_ndvd_respondents }}
-                            </span> 
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.jun_total_ndvd_respondents  > 0">
-                                {{ data.jun_total_ndvd_respondents }}
-                            </span> 
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.ndvd_grand_total_raw_points  > 0">
-                                {{ data.ndvd_grand_total_raw_points }}
-                            </span> 
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.ndvd_grand_total_score  > 0">
-                                {{ data.ndvd_grand_total_score }}
-                            </span> 
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.ndvd_grand_total_score  > 0 && data.grand_total_score > 0">
-                                {{ calculate(data.ndvd_grand_total_score, data.grand_total_score) }}
-                            </span> 
-                        </td>
+                        <td class="text-center">{{ data.apr_total_ndvd_respondents }}</td>
+                        <td class="text-center"> {{ data.may_total_ndvd_respondents }} </td>
+                        <td class="text-center">{{ data.jun_total_ndvd_respondents }} </td>
+                        <td class="text-center">{{ data.ndvd_grand_total_raw_points }}</td>
+                        <td class="text-center">{{ data.ndvd_grand_total_score }}</td>
+                        <td class="text-center">{{ calculate(data.ndvd_grand_total_score, data.grand_total_score) }}</td>
                     </tr>
                     <tr>
                         <td colspan="3" class="text-right">Total No. of All Responses::</td>
-                        <td class="text-center">
-                            <span v-if="data.apr_total_respondents  > 0">
-                                {{ data.apr_total_respondents }}
-                            </span> 
-                        </td>
-                        <td class="text-center"> 
-                            <span v-if="data.may_total_respondents  > 0">
-                                {{ data.may_total_respondents }}
-                            </span> 
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.jun_total_respondents  > 0">
-                                {{ data.jun_total_respondents }}
-                            </span> 
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.grand_total_raw_points  > 0">
-                                {{ data.grand_total_raw_points }}
-                            </span>  
-                        </td>
-                        <td class="text-center">
-                            <span v-if="data.grand_total_score  > 0">
-                                {{ data.grand_total_score }}
-                            </span>  
-                        </td>
+                        <td class="text-center">{{ data.apr_total_respondents }}</td>
+                        <td class="text-center"> {{ data.may_total_respondents }} </td>
+                        <td class="text-center">{{ data.jun_total_respondents }} </td>
+                        <td class="text-center">{{ data.grand_total_raw_points }} </td>
+                        <td class="text-center">{{ data.grand_total_score }}</td>
                         <td class="text-center"></td>
                     </tr>
                     <tr>
@@ -587,7 +496,7 @@
 
               <div style="margin-top: 20px; font-size: 13px">
                     COMMENTS/COMPLAINTS : 
-                    <span v-if="data.comments">       
+                    <span v-if="data.comments.length > 0">       
                         <template v-for="(comment, index) in data.comments" class="m-5 mb-10">
                             <table>
                             <p>[{{ index +1 }}] {{ comment  }}</p>

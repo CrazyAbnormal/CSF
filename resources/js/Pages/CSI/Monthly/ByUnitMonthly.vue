@@ -374,16 +374,12 @@
                     </table>
                 </div>
 
-                <div style="margin-top: 20px;  font-size: 13px; ">
+                <div style="margin-top: 20px;  font-size: 13px">
                     COMMENTS/COMPLAINTS : 
                     <span v-if="data.comments">       
-                        <template v-for="(comment, index) in data.comments">
+                        <template v-for="(comment, index) in data.comments" class="m-5 mb-10">
                             <table>
-                                <tr style="padding:5px">                          
-                                    <span v-if="comment.length > 5">
-                                        - {{ comment }} 
-                                    </span>
-                                </tr>
+                            <p style="margin-bottom:-10px">[{{ index +1 }}] {{ comment }}</p>
                             </table>
                         </template>
                     </span>
@@ -424,8 +420,6 @@
                     <span></span>
                    </div>
                 </div>
-
-               
 
             </div>  
         </div>
